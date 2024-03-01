@@ -1,1 +1,12 @@
 @import 'core/reset';
+
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+  margin: 2rem;
+}
+
+.labelCity{
+    display: block;
+}
