@@ -1,4 +1,4 @@
-export function fetchCharacters() {
+export function fetchRepos() {
     return fetch('https://api.github.com/orgs/Adalab/repos')
         .then(response => response.json())
         .then(responseData => {
