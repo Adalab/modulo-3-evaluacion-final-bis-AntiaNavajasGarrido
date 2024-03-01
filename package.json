@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "npm run build && mv dist docs && git add docs && git commit -m 'Update github Pages.' && git push"
+    "deploy": "rmdir docs /s /q | npm run build && rename dist docs && git add docs && git commit -m \"Update github Pages.\" && git push"
   },
   "dependencies": {
     "node": "^21.6.2",
