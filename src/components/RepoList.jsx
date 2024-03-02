@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import Repo from './Repo';
+import '../scss/App.scss';
+import '../scss/Repos.scss';
 
 function RepoList({repos}) {
     const renderRepos = repos.map((eachRepo) => {
@@ -13,7 +15,8 @@ function RepoList({repos}) {
     })
     return (
         <section className=''>
-            <h2 className=''>Repos at Adalab in GitHub</h2>
+
+            <h2 className='title'>Repos at Adalab in GitHub</h2>
             <ul className='cards'>
                 {renderRepos}
             </ul>

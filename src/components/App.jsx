@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../scss/App.scss';
-import Search from './Search';
+import '../scss/Repos.scss';
 import RepoList from './RepoList';
 import {fetchRepos} from '../data/fetch';
 import ls from '../data/localStorage';
@@ -26,8 +26,7 @@ function App() {
 
   return (
     <div>
-      <Search></Search>
-      <RepoList ></RepoList>
+      <RepoList repos={repos}></RepoList>
 
       <footer>
         <small>&copy; 2024 Antia Navajas | promo Alice</small>
