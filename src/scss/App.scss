@@ -1,5 +1,9 @@
 @import 'core/reset';
 
+.app{
+  background-image: linear-gradient(to bottom right, rgba(9, 121, 27, 0.555), rgba(235, 181, 33, 0.733));
+}
+
 .cards{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,4 +21,5 @@ a{
   justify-content: center;
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
+  color:rgba(3, 13, 14, 0.555);
 }

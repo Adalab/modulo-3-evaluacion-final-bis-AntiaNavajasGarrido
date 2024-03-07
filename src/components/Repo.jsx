@@ -5,6 +5,29 @@ import '../scss/Repos.scss';
 
 function Repo({eachRepo}) {
 
+
+    // const DOTS = {
+    //     'CSS':'🟣',
+    //     'React':'🔵',
+    //     'JavaScript':'🟠',
+    //     'HTML':'🟢',
+    // }
+    // const dots = ({language}) => {
+
+    //     if( (language) ==='CSS') {
+    //       return '🟣';
+    //     }
+    //     if( (language) ==='React' ) {
+    //       return '🔵';
+    //     }
+    //     if( (language) ==='JavaScript' ) {
+    //         return '🟠';
+    //       }
+    //     if( (language) ==='HTML' ) {
+    //     return '🟢';
+    //     }
+    //   }
+
     return (
         <Link className="linkRepo" to={"/repo/"+eachRepo.id}>
             <div className="repoInfo">

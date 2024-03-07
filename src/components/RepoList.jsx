@@ -14,9 +14,7 @@ function RepoList({repos}) {
         </li>
     })
     return (
-        <section className=''>
-
-            <h2 className='title'>Repos at Adalab in GitHub</h2>
+        <section>
             <ul className='cards'>
                 {renderRepos}
             </ul>
