@@ -20,7 +20,7 @@ Esta guía te permite tener una copia del ejercicio y ejecutarlo
 
 **Nota** Necesitas tener instalado [Node JS](https://nodejs.org/)
 
-### Pasos para ejecutar el ejercicio 🐾
+### Pasos para ejecutar el ejercicio
 
 Ejecuta estos comandos en la Terminal:
 
