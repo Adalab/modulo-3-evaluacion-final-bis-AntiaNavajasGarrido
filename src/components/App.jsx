@@ -46,6 +46,8 @@ function App() {
     return repos.find(eachRepo => eachRepo.id === id)
   };
 
+  const filteredName = repos.filter(repo => repo.name === filterName);
+
   return (
     <div className='app'>
       <header>
@@ -67,7 +69,7 @@ function App() {
 
 
 
-      <footer>
+      <footer className='footer'>
         <small>&copy; 2024 Antia Navajas | promo Alice</small>
       </footer>
     </div>
