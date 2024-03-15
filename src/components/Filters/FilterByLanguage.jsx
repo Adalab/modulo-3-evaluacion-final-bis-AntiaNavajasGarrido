@@ -11,7 +11,7 @@ function FilterByLanguage({filterLanguage, handleChangeFilterLanguage}) {
         <label className="label__name" htmlFor="searchLanguage">Busca por lenguaje:
         <select name="language" id="searchLanguage" onChange={hadleChange} value={filterLanguage}>
           <option value="CSS">CSS</option>
-          <option value="React">React</option>
+          <option value="Shell">Shell</option>
           <option value="JavaScript">JavaScript</option>
           <option value="HTML">HTML</option>
           <option value="all">Todos</option>

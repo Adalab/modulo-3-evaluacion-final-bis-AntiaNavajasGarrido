@@ -15,7 +15,7 @@ function App() {
 
 
   const [ filterName, setFilterName ] = useState ('');
-  const [ filterLanguage, setFilterLanguage ] = useState ('');
+  const [ filterLanguage, setFilterLanguage ] = useState ('all');
 
   const [repos, setRepos] = useState(ls.get('repos', []));
 
@@ -46,7 +46,16 @@ function App() {
     return repos.find(eachRepo => eachRepo.id === id)
   };
 
-  const filteredName = repos.filter(repo => repo.name === filterName);
+
+  const filteredName = repos
+  .filter((repo) => {     
+   return repo.name.toLowerCase().includes(filterName.toLowerCase())
+  })
+  .filter((repo) => {
+    
+    return filterLanguage === 'all' 
+      ? true 
+        : repo.language === filterLanguage });
 
   return (
     <div className='app'>
@@ -59,7 +68,10 @@ function App() {
         <Route path='/' element={
           <>
             <Filters filterLanguage={filterLanguage} handleChangeFilterLanguage={handleChangeFilterLanguage} filterName={filterName} handleChangeFilterName={handleChangeFilterName} />
-            <RepoList repos={repos} />
+            <section className='filteredSection'>
+              {filteredName.length > 0 ?(<RepoList repos={filteredName} />) : (`No hay ninguna coincidencia con: ${filterName}`)}
+            </section>
+            
           </>
         } />
 

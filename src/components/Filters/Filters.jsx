@@ -2,7 +2,7 @@ import FilterByLanguage from "./FilterByLanguage";
 import FilterByName from "./FilterByName";
 
 
-function Filters( {filterName, handleChangeFilterName, filterLanguage, handleChangeFilterLanguage}) {
+function Filters( {filterName, handleChangeFilterName, filterLanguage, handleChangeFilterLanguage }) {
 
     return (
         <>

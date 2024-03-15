@@ -5,28 +5,21 @@ import '../scss/Repos.scss';
 
 function Repo({eachRepo}) {
 
+    const dots = () => {
 
-    // const DOTS = {
-    //     'CSS':'🟣',
-    //     'React':'🔵',
-    //     'JavaScript':'🟠',
-    //     'HTML':'🟢',
-    // }
-    // const dots = ({language}) => {
-
-    //     if( (language) ==='CSS') {
-    //       return '🟣';
-    //     }
-    //     if( (language) ==='React' ) {
-    //       return '🔵';
-    //     }
-    //     if( (language) ==='JavaScript' ) {
-    //         return '🟠';
-    //       }
-    //     if( (language) ==='HTML' ) {
-    //     return '🟢';
-    //     }
-    //   }
+        if( eachRepo.language ==='CSS') {
+          return '🟣';
+        }
+        else if( eachRepo.language ==='Shell' ) {
+          return '🔵';
+        }
+        else if( eachRepo.language ==='JavaScript' ) {
+            return '🟠';
+        }
+         else if( eachRepo.language ==='HTML' ) {
+            return '🟢';
+         }
+    }
 
     return (
         <Link className="linkRepo" to={"/repo/"+eachRepo.id}>
@@ -35,7 +28,7 @@ function Repo({eachRepo}) {
                 <h2 className="repoName">{eachRepo.name}</h2>
                 <h3 className="repoDesc">{eachRepo.description}</h3>
                 <h3 className="repoDesc">{eachRepo.url}</h3>
-                <h3 className="repoDesc">{eachRepo.language}</h3>
+                <h3 className="repoDesc">{dots()} {eachRepo.language}</h3>
             </div>
         </Link>
     );
